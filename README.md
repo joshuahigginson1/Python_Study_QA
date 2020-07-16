@@ -1,1 +1,1 @@
-# Python_Study_QA
+# A readme for studying the PYTHON module within the QA academy.

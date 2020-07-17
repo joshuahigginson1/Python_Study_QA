@@ -45,4 +45,5 @@ print(f"After we append our {trainer_name}'s name: {first_names}")
 # Prints the n'th result in our list of first names.
 print(f"The {nth_result_in_list}th name in our list of QA first names is: {first_names[nth_index_pos]}!")
 
+# Prints the number of a specific defined first name, and calls the specific name.
 print(f"There are {first_names.count(name_to_count)} people called {name_to_count} in our cohort.")

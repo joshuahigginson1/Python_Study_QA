@@ -7,15 +7,18 @@ Print the 5th person in the list (this is a trick question, what is special abou
 Print the number of Chris' in the cohort.
 """
 
+
 # Here, we create a function to append our trainer's name to the list.
 
 def trainer_append(trainer, name_list):
     return name_list.append(trainer_name)
 
+
 # Define variables.
 
- # A list of first names within QAC DevOps cohort.
-first_names = ['Jason','Josh', 'Steven', 'Jack', 'Wasim', 'Dom', 'Thembia', 'Jacob', 'Arsalan', 'Mowafak', 'Chris','Amanda', 'Javas', 'John','Chris', 'Ryan', 'Bradley', 'Clifford', 'Tobi', 'Sam','Ed']
+# A list of first names within QAC DevOps cohort.
+first_names = ['Jason', 'Josh', 'Steven', 'Jack', 'Wasim', 'Dom', 'Thembia', 'Jacob', 'Arsalan', 'Mowafak', 'Chris',
+               'Amanda', 'Javas', 'John', 'Chris', 'Ryan', 'Bradley', 'Clifford', 'Tobi', 'Sam', 'Ed']
 
 # Here, we specify the result to find within our list.
 nth_result_in_list = 5

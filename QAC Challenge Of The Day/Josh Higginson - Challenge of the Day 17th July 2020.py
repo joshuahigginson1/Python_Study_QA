@@ -20,7 +20,9 @@ When x pointer hits n, then y pointer adds 1.
 
 To format our grid, we first need to convert our list into a string. For this, we can use replace() and strip().
 """
+# Define Imports -----------------------------------------------------------------------------------------------------
 
+import time
 
 # Define Functions ---------------------------------------------------------------------------------------------------
 
@@ -38,6 +40,7 @@ def user_input():  # Error prevention for a user input to the program.
 
         input_value = input("Please enter a positive integer: ")  # Gets a value from user.
         if input_value.lower() == 'q':  # Quits the program if the user presses q.
+            print("Thank you for playing!")
             quit()
 
         else:
@@ -51,6 +54,22 @@ def user_input():  # Error prevention for a user input to the program.
 
         repeat = False
         return output
+
+
+def program_end(var_restart_counter):
+    while var_restart_counter not in ['y', 'n', 'q']:
+
+        var_restart_counter = input("\n \n Do you want to play again? \n y or n: ")
+
+        if var_restart_counter == 'n' or var_restart_counter == 'q':
+            return False  # Returns a value of false, to end the where loop.
+
+        elif var_restart_counter.lower() == 'y':
+            print('\n Lets go again!')
+            return True  # Returns a value of true, to continue the where loop.
+
+        else:
+            print("Please enter either y, n, or q.")
 
 
 # Define Procedures --------------------------------------------------------------------------------------------------
@@ -75,10 +94,21 @@ def times_table_grid(multiplier):
 
 # Initialise variables -----------------------------------------------------------------------------------------------
 
+play_again_input = True
+restart_counter = None
 
 # Execute Code -------------------------------------------------------------------------------------------------------
 
-print("Welcome to the times table grid program! You can quit by typing 'Q'")
-input_num = user_input()
+while play_again_input:
 
-times_table_grid(input_num)
+    print("Welcome to the times table grid program! You can quit by typing 'Q'")
+
+    input_num = user_input()
+    times_table_grid(input_num)
+
+    play_again_input = program_end(restart_counter)
+
+    time.sleep(1)  # Waits for 3 seconds.
+    print("\n" * 20)  # Clears terminal without importing os.system.
+
+print('Goodbye! Thanks for playing.')  # Polite way to close the program.

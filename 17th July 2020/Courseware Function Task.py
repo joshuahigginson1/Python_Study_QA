@@ -154,12 +154,6 @@ def user_output(name, topic, percent, grade):
 
 
 
-
-
-
-
-
-
 homework_percent = grade_percent(homework.grade_max, homework.grade_min, student_homework)
 homework_grade = grade_calculator(pass_percent, distinction_percent, homework_percent)
 
@@ -175,7 +169,6 @@ min_marks = final_exam_grade_min + assessment_grade_min + homework_grade_min
 
 total_percent = round(grade_percent(total_marks, min_marks, student_total_raw_marks))
 total_grade = grade_calculator(pass_percent, distinction_percent, total_percent)
-
 
 # Execute Code
 

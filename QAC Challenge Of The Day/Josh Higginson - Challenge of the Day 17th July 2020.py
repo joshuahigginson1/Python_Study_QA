@@ -24,6 +24,7 @@ To format our grid, we first need to convert our list into a string. For this, w
 
 import time
 
+
 # Define Functions ---------------------------------------------------------------------------------------------------
 
 def grid_formatting(list_of_integers):  # Takes a list of integers as in input, and returns a formatted string.
@@ -87,7 +88,7 @@ def times_table_grid(multiplier):
             # print(f"the y index pointer is {y_index_pointer}")  # Used for debugging.
             integer_list.append(x_index_pointer * y_index_pointer)  # Multiplies pointers, appends them to a list.
 
-        # print(integer_list)  # You could leave it here, but wouldn't have fancy formatting.
+        #  return integer_list  # You could leave it here, but wouldn't have fancy formatting.
         print(grid_formatting(integer_list))  # Outputs formatted row to the terminal.
         integer_list.clear()  # If we don't clear the list, then the previous iteration's data will persist.
 
@@ -100,7 +101,6 @@ restart_counter = None
 # Execute Code -------------------------------------------------------------------------------------------------------
 
 while play_again_input:
-
     print("Welcome to the times table grid program! You can quit by typing 'Q'")
 
     input_num = user_input()

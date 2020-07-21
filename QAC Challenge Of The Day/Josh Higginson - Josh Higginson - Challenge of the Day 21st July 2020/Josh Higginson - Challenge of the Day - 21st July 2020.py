@@ -12,7 +12,7 @@ A string, 5 characters long, and comprised of lowercase letters.
 
 import pytest  # Import PyTest to run tests on code.
 
-import string_gen  # Replace with Ben's file name.
+import string_gen  # Replace with Harry's file name.
 
 
 # Define Tests ------------------------------------------------------------------------------------------------------

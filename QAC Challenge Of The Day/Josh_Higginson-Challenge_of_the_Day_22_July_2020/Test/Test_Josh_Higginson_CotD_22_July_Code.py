@@ -31,23 +31,9 @@ def test_negative_height():
             test_rect.area()
 
 
-def test_str_height():
-    for tests in range(20):
-        test_rect = Josh_Higginson_CotD_22_July_Code.Rectangle("Height", 6)
-        with pytest.raises(ValueError):
-            test_rect.area()
-
-
 def test_negative_width():
     for tests in range(20):
         test_rect = Josh_Higginson_CotD_22_July_Code.Rectangle(4, -6)
-        with pytest.raises(ValueError):
-            test_rect.area()
-
-
-def test_negative_width():
-    for tests in range(20):
-        test_rect = Josh_Higginson_CotD_22_July_Code.Rectangle(4, "Width")
         with pytest.raises(ValueError):
             test_rect.area()
 
@@ -58,8 +44,3 @@ def test_negative_height_and_width():
         with pytest.raises(ValueError):
             test_rect.area()
 
-
-def test_str_height_and_width():
-    test_rect = Josh_Higginson_CotD_22_July_Code.Rectangle('Height', 'Width')
-    with pytest.raises(ValueError):
-        test_rect.area()

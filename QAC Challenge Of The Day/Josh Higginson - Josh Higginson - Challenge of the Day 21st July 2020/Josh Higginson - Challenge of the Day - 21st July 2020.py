@@ -18,12 +18,15 @@ import string_gen  # Replace with Harry's file name.
 # Define Tests ------------------------------------------------------------------------------------------------------
 
 def test_string():
-    assert isinstance(string_gen.string_gen(), str) == True
+    for _ in range(20):
+        assert isinstance(string_gen.string_gen(), str)
 
 
 def test_five_chars():
-    assert len(string_gen.string_gen()) == 5
+    for _ in range(20):
+        assert len(string_gen.string_gen()) == 5
 
 
 def test_lower_case():
-    assert string_gen.string_gen().islower() == True
+    for _ in range(20):
+        assert string_gen.string_gen().islower()

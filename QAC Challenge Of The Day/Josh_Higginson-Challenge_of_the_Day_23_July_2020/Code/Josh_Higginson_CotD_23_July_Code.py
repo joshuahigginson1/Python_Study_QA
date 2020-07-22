@@ -19,6 +19,3 @@ def word_sorter(string):
     output = " ".join(sorted_input)
 
     return output
-
-
-print(word_sorter("9oodworm 9pple 3offee 6imple 8hiny 56hellshock 3ardvark"))

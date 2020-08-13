@@ -1,0 +1,25 @@
+LABEL stage="Stage 10"
+LABEL description="Python Flask Blog - Stage 10 Docker Image"
+
+# Install DOCKER+GUNICORN version.
+
+FROM danriti/gunicorn-flask:latest
+
+# Set working directory
+
+WORKDIR /opt/docker_builds
+
+# Copy the everything inside of the flask_blog directory, to the cwd.
+
+COPY /github_repos/flask_blog/ .
+
+# Install dependencies.
+
+RUN sudo pip3 install -r requirements.txt
+
+# port 5000 on TCP has been exposed here for documentation purposes
+EXPOSE 5000
+
+# Run gunicorn.
+
+ENTRYPOINT ["gunicorn" , "--bind", "0.0.0.0:5000", "--workers", "4",  "wsgi:app"]

@@ -1,0 +1,25 @@
+# .dockerignore Challenge of the Day - Joshua Higginson - 12th August 2020
+
+# Ignore:
+# ...any files ending in ".md"
+*.md
+
+# ...any files in the directory of src
+*/src/*
+
+# ...Any files beginning with "foo" EXCEPT if they also begin with "bar"
+
+foo!(bar)*
+
+
+# Starts with FOO, except if it also ends with bar.
+
+foo*!*bar
+
+
+# ...Any files ending in ".txt" but only in directories that start with the letter "a".
+
+/a*.txt
+
+
+
